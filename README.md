@@ -13,5 +13,7 @@ Variable Name | Value | Description
 ------------ | ------------- | -------------
 **`FIVETHIRTYEIGHT_PAGE_DURATION`** | # of milliseconds | how long each page is shown before moving to the next (default: 15 seconds)
 **`FIVETHIRTYEIGHT_REFRESH_FREQUENCY`** | # of milliseconds | how often to refresh the page (to get updated data) (default: 30 minutes)
+* **`URL_LAUNCHER_WIDTH`** | *int* (converted from *string*) | *defaults to* `1920`
+* **`URL_LAUNCHER_HEIGHT`** | *int* (converted from *string*) | *defaults to* `1080`
 
 Apply the above settings in the "Fleet Configuration" panel (if applying it for the all devices withing your application), or "Device Configuration" panel (if applying it for a single device).

@@ -6,6 +6,8 @@ require('electron-debug')({})
 app.on('ready', () => {
 
     const window = new BrowserWindow({
+        width: parseInt(process.env.URL_LAUNCHER_WIDTH) || 1920,
+        height: parseInt(process.env.URL_LAUNCHER_HEIGHT) || 1080,
         kiosk: true,
         webPreferences: {
             nodeIntegration: false,
