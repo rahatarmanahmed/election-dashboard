@@ -9,6 +9,8 @@ app.on('ready', () => {
         width: parseInt(process.env.URL_LAUNCHER_WIDTH) || 1920,
         height: parseInt(process.env.URL_LAUNCHER_HEIGHT) || 1080,
         kiosk: true,
+        frame: false,
+        autoHideMenuBar: true,
         webPreferences: {
             nodeIntegration: false,
             preload: path.join(__dirname, 'fivethirtyeight/index.js')
