@@ -40,8 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         $doc.find(selector).clone(true).css({
             margin: 'auto',
-            position: 'relative'
-        }).appendTo(container)
+            position: 'relative',
+            textAlign: 'center'
+        })
+        .appendTo(container)
+
     }
 
     var pages = [
@@ -61,6 +64,14 @@ document.addEventListener('DOMContentLoaded', () => {
         ]
     ]
 
+    var waitForGraphs = [
+        '#cardsets > div.cardset.current > div > div.cards > div.card.card-has-bottom-key > div.map > svg',
+        '#cardsets > div.cardset.current > div > div.cards > div.card.winning > svg',
+        '#cardsets > div.cardset.current > div > div.cards > div:nth-child(7) > div.map > svg',
+        '#cardsets > div.cardset.current > div > div.cards > div:nth-child(8) > svg'
+
+    ]
+
     const focusPage = (page) => focus(page.join())
 
     const waitForSelector = (selector) => new Promise(resolve => {
@@ -72,9 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 50)
     })
 
-    waitForSelector(pages[0][1])
+    Promise.all(waitForGraphs.map(waitForSelector))
     .then(() => {
-
         let i = 0;
         setInterval(() => {
             focusPage(pages[i++ % pages.length])
