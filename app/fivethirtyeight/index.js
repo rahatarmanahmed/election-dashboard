@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     const $doc = $(document)
-    console.log($doc)
 
     let container
 
@@ -49,26 +48,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     var pages = [
         [
-            '#cardsets > div.cardset.current > div > div.cards > div.card.card-winprob.card-winprob-us.winprob-bar',
-            '#cardsets > div.cardset.current > div > div.cards > div.card.card-has-bottom-key',
-            '#cardsets > div.cardset.current > div > div.cards > div.card.card-winprob.card-natl-tables'
+            '[data-card-id="US-winprob-sentence"]',
+            '[data-card-id="US-racemap"]',
+            '[data-card-id="US-national-tables"]',
         ],
         [
-            '#cardsets > div.cardset.current > div > div.cards > div.card.winning'
+            '[data-card-id="US-winprob"]',
         ],
         [
-            '#cardsets > div.cardset.current > div > div.cards > div:nth-child(7)'
+            '[data-card-id="US-evmap"]',
         ],
         [
-            '#cardsets > div.cardset.current > div > div.cards > div:nth-child(8)'
+            '[data-card-id="US-stateorder"]',
         ]
     ]
 
     var waitForGraphs = [
-        '#cardsets > div.cardset.current > div > div.cards > div.card.card-has-bottom-key > div.map > svg',
-        '#cardsets > div.cardset.current > div > div.cards > div.card.winning > svg',
-        '#cardsets > div.cardset.current > div > div.cards > div:nth-child(7) > div.map > svg',
-        '#cardsets > div.cardset.current > div > div.cards > div:nth-child(8) > svg'
+        '[data-card-id="US-racemap"] svg',
+        '[data-card-id="US-winprob"] svg',
+        '[data-card-id="US-evmap"] svg',
+        '[data-card-id="US-stateorder"] svg',
 
     ]
 
